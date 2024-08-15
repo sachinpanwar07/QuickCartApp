@@ -1,16 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './src/redux/store';
+import Items from './src/components/Items';
+const App = () => (
+  <Provider store={store}>
+    <Items />
+  </Provider>
+);
 
-import BottomTabNavigation from './src/navigations/BottomTabNavigation'
-
-const App = () => {
-  return (
-    <>
-     <BottomTabNavigation/>
-    </>
-  )
-}
-
-export default App
-
-const styles = StyleSheet.create({})
+export default App;
