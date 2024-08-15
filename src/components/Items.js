@@ -89,7 +89,7 @@ const Items = ({ cart, addToCart, incrementQuantity, decrementQuantity }) => {
           </View>
           <View style={styles.priceQuantityContainer}>
             <Text style={[styles.textStyle, { color: scheme === 'dark' ? colors.whiteColor : colors.blackColor }]}>
-              Rs: {displayPrice}
+              Rs: {displayPrice.toFixed(2)}
             </Text>
             {isItemInCart && (
               <View style={styles.quantityControls}>
